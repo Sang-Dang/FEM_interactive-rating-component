@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+    --global-border-radius: .5rem;
+
+    --orange: rgb(251, 116, 19);
+    --white: rgb(255, 255, 255);
+    --light-gray: rgb(149, 158, 172);
+    --medium-gray: rgb(124, 135, 152);
+    --dark-blue: rgb(37, 45, 55);
+    --very-dark-blue: rgb(18, 20, 23);
+    --black: #000000;
+    font-size: 15px;
+}
+
+* {
+    color: white;
+}
+
+body {
+    font-family: "Overpass", sans-serif;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgb(18, 20, 23);
+    background: linear-gradient(0deg, rgba(18, 20, 23, 1) 72%, rgba(37, 45, 55, 1) 100%);
+    width: 90%;
+    max-width: 350px;
+    border-radius: var(--global-border-radius);
+    padding: 20px;
+    font-family: Overpass, sans-serif;
+    text-align: left;
+}
+
+.icon {
+    background-color: #262f38;
+    padding: 10px;
+    border-radius: 50%;
+    width: 30px;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: var(--light-gray);
+    line-height: 1.4rem;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.button > .buttonitem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #262f38;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--medium-gray);
+    transition: background-color 0.1s ease-in;
+}
+
+.button > .buttonitem:hover {
+    background-color: var(--light-gray);
+    color: var(--white);
+}
+
+.button > .buttonitem.active {
+    background-color: var(--orange);
+}
+
+.submit {
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--orange);
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-family: Overpass, sans-serif;
+    letter-spacing: .2rem;
+}
+
+/* thank you */
+.thanks {
+    text-align: center;
+}
+
+.thanks-header {
+    margin-bottom: 30px;
+}
+
+.thanks-header > .image {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.thanks-header > .image > img {
+    width: 110px;
+}
+
+.thanks-header > .recap {
+    color: orange;
+    font-size: .8rem;
+    background-color: #262f38;
+    display: inline;
+    padding: 5px 20px;
+    border-radius: 2rem;
+}
+
+.container:nth-child(2), .container:nth-child(2)>* {
+    display: none;
+}
