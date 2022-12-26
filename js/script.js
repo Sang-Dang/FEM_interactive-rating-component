@@ -1,13 +1,19 @@
-var buttons = document.getElementsByClassName("buttonitem");
+const allButtons = document.getElementsByClassName("buttonitem");
 
-for(var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", () => {
-        for (let index = 0; index < buttons.length; index++) {
-            if(buttons[index].classList.contains("active"))
-                buttons[index].classList.remove("active");
-        }
-        if(!buttons[i].classList.contains("active")) {
-            buttons[i].classList.add("active");
+document.querySelectorAll(".buttonitem").forEach(item => {
+    item.addEventListener('click', () => {
+        for (let i = 0; i < allButtons.length; i++) {
+            allButtons[i].classList.remove("active");
+            if(!item.classList.contains("active")) {
+                item.classList.add("active");
+            }
         }
     })
+});
+
+function submitForm() {
+    var submitItem = document.querySelector(".buttonitem.active").innerHTML;
+    document.getElementsByClassName("result")[0].innerHTML = submitItem;
+    document.querySelector(".thanks").classList.add("active");
+    document.querySelector(".select").classList.add("active");
 }
